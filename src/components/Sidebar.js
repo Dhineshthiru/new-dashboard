@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
 import Logo from "../imgs/Dorustree-removebg-preview.png";
+import { UilSignOutAlt } from "@iconscout/react-unicons";
 import { SidebarData } from "../Data/Data";
-
+import { UilBars } from "@iconscout/react-unicons";
+import { motion } from "framer-motion";
 
 const Sidebar = () => {
   const [selected, setSelected]=useState(0);
 
+  const [expanded, setExpanded]=useState(true);
+
   return (
     <div className="Sidebar">
       <div className="logo">
-        <img src={Logo} alt="" />
+        <img src={Logo} alt="" style={{ cursor: "pointer" }}/>
         <span>
           Dorus<span>tree</span>
         </span>
